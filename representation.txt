@@ -1,0 +1,1 @@
+Para representar uma solução do problema Set Partitioning, iremos usar um vetor de inteiros, onde cada inteiro representa um bitmask, 
