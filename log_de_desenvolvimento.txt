@@ -1,1 +1,14 @@
-Inicialmente, a implementação 
+Classe solução:
+  Cada solução gerada do problema, é uma classe;
+  Para representar a solução do problema vamos usar um vetor de bits;
+  Para representar o vetor binário é usado um vetor de inteiros de 32 bits, sendo que cada bit do inteiro representa uma partição do SPP;
+  Para representar quais elementos estão representados, foi usado um vetor de inteiros de tamanho n, sendo que esse vetor representa a quantidade de particições que tem aquele determinado elemento;
+  Para calcular a função objetivo, foi adaptado uma "penalidade" para as soluções inviáveis, se a solução é viável a penalidade é 0. Se nenhum conjunto cobre o elemento i ou dois conjuntos cobrem o elemento i, a penalidade para o elemento i é igual a MAXPriceValue.
+  Se a quantidade é maior do que 2, a penalidade é a quantidade de vezes menos um, multiplicado por MAXPriceValue.
+
+
+O algoritmo guloso inicial ainda não está feito;
+
+Para a busca tabu está no seu estágio inicial;
+A função de aspiração é puramente por mérito;
+Para percorrer a vizinhança de uma solução trocamos todos os bits da solução.

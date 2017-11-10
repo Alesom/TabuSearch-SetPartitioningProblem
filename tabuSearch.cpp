@@ -16,12 +16,12 @@ const int MAX = 31;
 const int LIM = 2000000;
 const int MAXT = 270000;
 const int P = 1000000007;
-const int INF = (1 << 28);
+const ll INF = 0x3F3F3F3F3F3F3F3FLL;
 const double EPS = 1e-6;
 const double PI = 3.14159265358979;
 const int partSz = 32; // tamanho da partição na solução(tamanho de um inteiro)
 const int BTMAX = 1 << 10;
-const int T = 5; // tamanho da lista tabu;
+const int T = 11234; // tamanho da lista tabu;
 
 vector< vector<int> > Dados; // Matriz que armazena todos os dados do problema, exceto o número de partições m e o número de elementos n;
 int MAXPriceValue; // Valor máximo de uma partição;
@@ -29,7 +29,7 @@ int n, m; // n representa a quantidade de elementos e m representa a quantidade 
 
 struct solution{
     vector<unsigned> p; // vetor que representa quais partições estão ou não estão na solução
-    int sizelast; // representa o tamanho do último inteiro adicionado a p;
+    ll sizelast; // representa o tamanho do último inteiro adicionado a p;
     vector<char> e; /*vetor que representa quantas vezes um elemento foi "coberto";
                     Se e[i] = 0 o elemento não foi coberto;
                     Se e[i] = 1 o elemento foi coberto de forma perfeita;
@@ -120,7 +120,7 @@ struct solution{
         ll pen = 0;
         for (int i = 0; i < n; i++){
             if (e[i] == 0 || e[i] == 2) pen+=MAXPriceValue;
-            else pen += (e[i] - 1) * MAXPriceValue;
+            else pen += ll(e[i] - 1) * MAXPriceValue;
         }
         FO_Value = FO_P + pen;
     }
@@ -136,8 +136,7 @@ struct solution{
     void print(int n, int m){
         cout << FO_P <<" "<< FO_Value << endl;
 
-
-        for (int i = 0; i < sz(e); i++){
+        /*for (int i = 0; i < sz(e); i++){
           cout << int(e[i]) <<" ";
         }
 
@@ -146,7 +145,7 @@ struct solution{
         for (int i = 0; i < m; i++){
             cout << getBit(i);
         }
-        cout << endl;
+        cout << endl;*/
     }
 };
 
@@ -179,11 +178,6 @@ struct tabuList{
 solution guloso(){
   vector<bool> v;
   return solution(n, m, v);
-}
-
-solution min(solution s1, solution s2){
-  if (s1 < s2) return s1;
-  return s2;
 }
 
 bool fAspiration(solution s, int mov, solution BestS){
@@ -232,7 +226,7 @@ solution tabu(){
   return BestS;
 }
 
-void read(){ // oassando como parâmetro, precisa arrumar
+void read(){ // passando como parâmetro, precisa arrumar
   scanf("%d %d", &n, &m);
   vi partition;
   int qt, aux;
@@ -251,10 +245,11 @@ void read(){ // oassando como parâmetro, precisa arrumar
     Dados.pb(partition); // a matriz dados é um vetor, onde cada elemento é uma novo vetor que armazena as informações sobre as partições.
     partition.clear();
   }
+  MAXPriceValue*=m;
 }
 
 void printDadosSetPartitioning(){
-  cout << n << " " << m << endl;
+  cout << n << " " << m <<endl;
   for (int i = 0; i < sz(Dados); i++){
     for (int j = 0; j < sz(Dados[i]); j++){
       cout << Dados[i][j] << " ";
@@ -273,6 +268,7 @@ vector<bool> makeVecBool(string s){
 
 int main(){
   read();
+  cout << "max->" << MAXPriceValue << endl;
   tabu().print(n, m);
   return 0;
 }
