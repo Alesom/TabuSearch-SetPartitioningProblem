@@ -191,7 +191,7 @@ bool fAspiration(solution s, int mov, solution BestS){
   return false;
 }
 
-solution tabu(){;
+solution tabu(){
   solution s = guloso();
   solution BestS = s;
 
@@ -203,10 +203,10 @@ solution tabu(){;
     sMin.FO_Value = INF;
 
     int mov = -1;
-    for (int i = 0; i < m; i++){
+    for (int i = 0; i < m; i++){ // percorre todos os vizinhos da solução s
       solution s1 = solution(s);
       s1.setBit(n, i, !s1.getBit(i));
-      s1.print(n, m);
+    //  s1.print(n, m);
       if (!LT.isTabu(i) || fAspiration(s1, i, BestS)){
         if (sMin > s1){
           sMin = s1;
@@ -215,14 +215,15 @@ solution tabu(){;
       }
     }
     LT.add(mov, T);
-    cout << "Ganhou\n";
-    sMin.print(n, m);
-    cout << "end\n";
+
     s = sMin;
 
     if (sMin < BestS){
       BestS = sMin;
       Miter = iter;
+      cout << "Ganhou\n";
+      sMin.print(n, m);
+      cout << "end\n";
       //BestS.print(n, m);
     }
 
