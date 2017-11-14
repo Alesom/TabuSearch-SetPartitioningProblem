@@ -1,54 +1,18 @@
 #include "main.hpp"
 
+vector< vector<int> > Dados; // Matriz que armazena todos os dados do problema, exceto o número de partições m e o número de elementos n;
+int MAXPriceValue; // Valor máximo de uma partição;
+int n, m; // n representa a quantidade de elementos e m representa a quantidade de partições
+int T = 4; // tamanho da lista tabu;
+
 solution guloso(){
   vector<bool> v;
-  return solution(n, m, v);
+  return solution(n, m, v, MAXPriceValue, Dados);
 }
 
 bool fAspiration(solution s, int mov, solution BestS){
   if (BestS > s) return true;
   return false;
-}
-
-solution tabu(){
-  solution s = guloso();
-  solution BestS = s;
-
-  int iter, Miter = 0;
-  tabuList LT; // lista tabu
-
-  for (iter = 0; iter - Miter < BTMAX; iter++) {
-    solution sMin = s;
-    sMin.FO_Value = INF;
-
-    int mov = -1;
-    for (int i = 0; i < m; i++){ // percorre todos os vizinhos da solução s
-      solution s1 = solution(s);
-      s1.setBit(n, i, !s1.getBit(i));
-    //  s1.print(n, m);
-      if (!LT.isTabu(i) || fAspiration(s1, i, BestS)){
-        if (sMin > s1){
-          sMin = s1;
-          mov = i;
-        }
-      }
-    }
-    LT.add(mov, T);
-
-    s = sMin;
-
-    if (sMin < BestS){
-      BestS = sMin;
-      Miter = iter;
-      cout << "Ganhou\n";
-      sMin.print(n, m);
-      cout << "end\n";
-      //BestS.print(n, m);
-    }
-
-  }
-
-  return BestS;
 }
 
 void read(){ // passando como parâmetro, precisa arrumar
@@ -94,6 +58,6 @@ vector<bool> makeVecBool(string s){
 int main(){
   read();
   cout << "max->" << MAXPriceValue << endl;
-  tabu().print(n, m);
+  tabuT_fixo(n, m, T, MAXPriceValue, Dados).print(n, m);
   return 0;
 }

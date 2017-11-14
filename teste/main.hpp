@@ -21,11 +21,6 @@ const double EPS = 1e-6;
 const double PI = 3.14159265358979;
 const int partSz = 32; // tamanho da partição na solução(tamanho de um inteiro)
 const int BTMAX = 1 << 10;
-const int T = 11234; // tamanho da lista tabu;
-
-vector< vector<int> > Dados; // Matriz que armazena todos os dados do problema, exceto o número de partições m e o número de elementos n;
-int MAXPriceValue; // Valor máximo de uma partição;
-int n, m; // n representa a quantidade de elementos e m representa a quantidade de partições
 
 struct solution{
     vector<unsigned> p; // vetor que representa quais partições estão ou não estão na solução
@@ -38,7 +33,7 @@ struct solution{
     ll FO_Value; //Valor da função objetivo aplicada da solução com a adicão da penalidade;
     ll FO_P; //Valor da função objetivo aplicada da solução sem as penalidades;
 
-    solution(int n, int m, vector<bool> v){ /* Método construtor;
+    solution(int n, int m, vector<bool> v, ll MAXPriceValue, vector< vector<int> > Dados){ /* Método construtor;
                         n representa o número de elementos;
                         m representa o número de partições.
                         v representa o vetor 0's e 1's na solução*/
@@ -57,7 +52,7 @@ struct solution{
         for (int i = 0; i < n; i++) e.pb(0);
         if (sz(v) != m) return;
         for (int i = 0; i < sz(v); i++){
-          setBit(n, i, v[i]);
+          setBit(n, i, v[i], MAXPriceValue, Dados);
         }
     }
 
@@ -101,7 +96,7 @@ struct solution{
         return (p[integerPart] & (1 << bit)) >> bit;
     }
 
-    void setBit(int n, int i, int b){
+    void setBit(int n, int i, int b, int MAXPriceValue, vector< vector<int> > Dados){
         int integerPart = getIntPart(i);
         int bit = getPosPart(i);
         if (b){
@@ -177,7 +172,7 @@ struct tabuList{
 
 solution guloso();
 bool fAspiration(solution s, int mov, solution BestS);
-solution tabu();
+solution tabuT_fixo(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados);
 void read();
 void printDadosSetPartitioning();
 vector<bool> makeVecBool(string s);
