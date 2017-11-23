@@ -5,9 +5,43 @@ int MAXPriceValue; // Valor máximo de uma partição;
 int n, m; // n representa a quantidade de elementos e m representa a quantidade de partições
 int T = 10; // tamanho da lista tabu;
 
+int sortByIndex(const void *a, const void *b){
+  int i = *(int *)a;
+  int j = *(int *)b;
+  return Dados[i][0] - Dados[j][0];
+}
+
 solution guloso(){
+  int I[m];
   vector<bool> v;
-  return solution(n, m, v, MAXPriceValue, Dados);
+  solution s = solution(n, m, v, MAXPriceValue, Dados);
+
+  for (int i = 0; i < m; i++){
+    I[i] = i;
+  }
+  qsort(I, m, sizeof(int), sortByIndex);
+  /*for (int i = 0; i < m; i++){
+    for (int j = 0; j < sz(Dados[i]); j++){
+      cout << Dados[I[i]][j] << " ";
+    }
+    cout << endl;
+  }
+  s.print(n, m);
+*/
+
+  for (int i = 0; i < m; i++){
+    int ff = true;
+    for (int j = 1; j < sz(Dados[I[i]]) && ff; j++){
+      if (s.e[Dados[I[i]][j] - 1]) ff = false;
+    }
+
+    if (ff){
+      s.setBit(n, I[i], 1, MAXPriceValue, Dados);
+      s.print(n, m);
+    }
+  }
+
+  return s;
 }
 
 bool fAspiration(solution s, int mov, solution BestS){

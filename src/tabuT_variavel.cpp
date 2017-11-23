@@ -7,6 +7,7 @@
 solution tabuT_variavel(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados){
   solution s = guloso();
   solution BestS = s;
+
   int NoNewSolutionIteration = 0;
   map<int, int> LoopControlol; // variável para controle de vezes que vamos considerar uma solução;
   int iter, Miter = 0;
@@ -45,9 +46,9 @@ solution tabuT_variavel(int n, int m, int &T, ll MAXPriceValue, vector< vector<i
       BestS = sMin;
       Miter = iter;
   //    cout << T << endl;
-    /*  cout << "Ganhou\n";
+      cout << "Ganhou\n";
       sMin.print(n, m);
-      cout << "end\n";*/
+      cout << "end\n";
     }
 
     if (LoopControlol.find(sMin.FO_Value) != LoopControlol.end()){
