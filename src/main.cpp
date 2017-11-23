@@ -3,7 +3,7 @@
 vector< vector<int> > Dados; // Matriz que armazena todos os dados do problema, exceto o número de partições m e o número de elementos n;
 int MAXPriceValue; // Valor máximo de uma partição;
 int n, m; // n representa a quantidade de elementos e m representa a quantidade de partições
-int T = 4; // tamanho da lista tabu;
+int T = 10; // tamanho da lista tabu;
 
 solution guloso(){
   vector<bool> v;
@@ -58,6 +58,6 @@ vector<bool> makeVecBool(string s){
 int main(){
   read();
   cout << "max->" << MAXPriceValue << endl;
-  tabuT_fixo(n, m, T, MAXPriceValue, Dados).print(n, m);
+  tabuT_variavel(n, m, T, MAXPriceValue, Dados).print(n, m);
   return 0;
 }

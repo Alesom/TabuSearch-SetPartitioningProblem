@@ -1,0 +1,4 @@
+g++ main.hpp -Wall
+g++ *.cpp -Wall -o Tabu
+./Tabu < ../instances/sppnw08.txt
+max->4631648

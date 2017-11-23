@@ -25,7 +25,7 @@ const int BTMAX = 1 << 10;
 struct solution{
     vector<unsigned> p; // vetor que representa quais partições estão ou não estão na solução
     ll sizelast; // representa o tamanho do último inteiro adicionado a p;
-    vector<char> e; /*vetor que representa quantas vezes um elemento foi "coberto";
+    vector<int> e; /*vetor que representa quantas vezes um elemento foi "coberto";
                     Se e[i] = 0 o elemento não foi coberto;
                     Se e[i] = 1 o elemento foi coberto de forma perfeita;
                     Se e[i] > 1 existe mais de um partição cobrindo o elemento*/
@@ -93,12 +93,15 @@ struct solution{
     int getBit(int i){
         int integerPart = getIntPart(i);
         int bit = getPosPart(i);
-        return (p[integerPart] & (1 << bit)) >> bit;
+        int aux = (p[integerPart] & (1 << bit)) >> bit;
+      //  if (aux != 1 && aux != 0) cout << "nus" << endl;
+        return aux;
     }
 
     void setBit(int n, int i, int b, int MAXPriceValue, vector< vector<int> > Dados){
         int integerPart = getIntPart(i);
         int bit = getPosPart(i);
+
         if (b){
             p[integerPart] = p[integerPart] | (1 << bit);
             FO_P+=Dados[i][0]; // atualiza a função objetivo;
@@ -110,12 +113,13 @@ struct solution{
             FO_P-=Dados[i][0]; // atualiza a função objetivo;
             for(int j = 1; j < sz(Dados[i]); j++){
                 e[Dados[i][j] - 1]--;
+            //    if (e[Dados[i][j] - 1] < 0) cout << "oi" << b << endl;
             }
         }
         ll pen = 0;
-        for (int i = 0; i < n; i++){
-            if (e[i] == 0 || e[i] == 2) pen+=MAXPriceValue;
-            else pen += ll(e[i] - 1) * MAXPriceValue;
+        for (int j = 0; j < n; j++){
+            if (e[j] == 0 || e[j] == 2) pen+=MAXPriceValue;
+            else pen += ll(e[j] - 1) * MAXPriceValue;
         }
         FO_Value = FO_P + pen;
     }
@@ -131,7 +135,7 @@ struct solution{
     void print(int n, int m){
         cout << FO_P <<" "<< FO_Value << endl;
 
-        /*for (int i = 0; i < sz(e); i++){
+        for (int i = 0; i < sz(e); i++){
           cout << int(e[i]) <<" ";
         }
 
@@ -140,7 +144,7 @@ struct solution{
         for (int i = 0; i < m; i++){
             cout << getBit(i);
         }
-        cout << endl;*/
+        cout << endl;
     }
 };
 
@@ -168,11 +172,24 @@ struct tabuList{
   bool isTabu(int x){
     return tl.find(x) != tl.end();
   }
+
+  void clear(){
+    tl.clear();
+    while (!Q.empty()) Q.pop();
+  }
+
+  void print(){
+    for (set<int>::iterator it = tl.begin(); it!=tl.end(); it++){
+      cout << *it <<" ";
+    }
+    cout << endl;
+  }
 };
 
 solution guloso();
 bool fAspiration(solution s, int mov, solution BestS);
 solution tabuT_fixo(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados);
+solution tabuT_variavel(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados);
 void read();
 void printDadosSetPartitioning();
 vector<bool> makeVecBool(string s);
