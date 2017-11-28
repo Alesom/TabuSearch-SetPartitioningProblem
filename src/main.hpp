@@ -20,7 +20,8 @@ const ll INF = 0x3F3F3F3F3F3F3F3FLL;
 const double EPS = 1e-6;
 const double PI = 3.14159265358979;
 const int partSz = 32; // tamanho da partição na solução(tamanho de um inteiro)
-const int BTMAX = 1 << 10;
+const int BTMAX = 1 << 20;
+const int BTMAXITERSEMMELHORA = 1 << 13;
 
 struct solution{
     vector<unsigned> p; // vetor que representa quais partições estão ou não estão na solução
@@ -118,8 +119,8 @@ struct solution{
         }
         ll pen = 0;
         for (int j = 0; j < n; j++){
-            if (e[j] == 0 || e[j] == 2) pen+=MAXPriceValue;
-            else pen += ll(e[j] - 1) * MAXPriceValue;
+            if (e[j] == 0) pen += MAXPriceValue;
+            else if (e[j] >= 2) pen += ll(e[j]) * MAXPriceValue;
         }
         FO_Value = FO_P + pen;
     }
@@ -178,6 +179,13 @@ struct tabuList{
     while (!Q.empty()) Q.pop();
   }
 
+  void resize(int T){
+    while (sz(tl) > T){
+      int u = Q.front(); Q.pop();
+      tl.erase(u);
+    }
+  }
+
   void print(){
     for (set<int>::iterator it = tl.begin(); it!=tl.end(); it++){
       cout << *it <<" ";
@@ -187,9 +195,11 @@ struct tabuList{
 };
 
 solution guloso();
-bool fAspiration(solution s, int mov, solution BestS);
+bool fAspiration(int m, solution s, solution BestS, int &NoNewSolutionIteration, ll MAXPriceValue);
 solution tabuT_fixo(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados);
 solution tabuT_variavel(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados);
+void UpdatefAspiration(solution s, solution BestS, int m, map<solution, int> LoopControlol, int &T, int &NoNewSolutionIteration, tabuList &lt);
+void chanceListaTabuSize(int m, int aumentaDiminui, int &T, tabuList &tl);
 void read();
 void printDadosSetPartitioning();
 vector<bool> makeVecBool(string s);

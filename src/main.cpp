@@ -45,15 +45,6 @@ solution guloso(){
   return s;
 }
 
-bool fAspiration(solution s, int mov, solution BestS){
-/*  if (BestS > s) return true;
-  default_random_engine generator;
-  uniform_int_distribution<int> distribution(1, 100);
-  int dice_roll = distribution(generator);  // generates number in the range 1..6*/
-  if (BestS > s) return true;
-  return false;
-}
-
 void read(){ // passando como parâmetro, precisa arrumar
   scanf("%d %d", &n, &m);
   vi partition;
@@ -96,7 +87,7 @@ vector<bool> makeVecBool(string s){
 
 int main(){
   read();
-  cout << "max->" << MAXPriceValue << endl;
-  tabuT_fixo(n, m, T, MAXPriceValue, Dados).print(n, m);
+  //cout << "max->" << MAXPriceValue << endl;
+  tabuT_variavel(n, m, T, MAXPriceValue, Dados).print(n, m);
   return 0;
 }

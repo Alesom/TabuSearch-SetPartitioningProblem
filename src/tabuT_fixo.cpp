@@ -15,7 +15,8 @@ solution tabuT_fixo(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> 
     for (int i = 0; i < m; i++){ // percorre todos os vizinhos da solução s
       solution s1 = solution(s);
       s1.setBit(n, i, !s1.getBit(i), MAXPriceValue, Dados);
-      if (!LT.isTabu(i) || fAspiration(s1, i, BestS)){
+      int aux;
+      if (!LT.isTabu(i) || fAspiration(m, s1, BestS, aux, 1)){
         if (sMin > s1){
           sMin = s1;
           mov = i;
