@@ -38,7 +38,7 @@ solution guloso(){
 
     if (ff){
       s.setBit(n, I[i], 1, MAXPriceValue, Dados);
-      s.print(n, m);
+    //  s.print(n, m);
     }
   }
 
@@ -46,6 +46,10 @@ solution guloso(){
 }
 
 bool fAspiration(solution s, int mov, solution BestS){
+/*  if (BestS > s) return true;
+  default_random_engine generator;
+  uniform_int_distribution<int> distribution(1, 100);
+  int dice_roll = distribution(generator);  // generates number in the range 1..6*/
   if (BestS > s) return true;
   return false;
 }

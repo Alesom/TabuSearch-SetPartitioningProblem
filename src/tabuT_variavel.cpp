@@ -12,7 +12,8 @@ solution tabuT_variavel(int n, int m, int &T, ll MAXPriceValue, vector< vector<i
   map<int, int> LoopControlol; // variável para controle de vezes que vamos considerar uma solução;
   int iter, Miter = 0;
   tabuList LT; // lista tabu
-  T = m >> 2; // setando o tamanho da lista tabu para 2.
+  T = m>>2; // setando o tamanho da lista tabu para 2.
+
 
   for (iter = 0; iter - Miter < BTMAX; iter++){
     solution sMin = s;
