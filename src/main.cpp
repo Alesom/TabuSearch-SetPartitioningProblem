@@ -3,7 +3,7 @@
 vector< vector<int> > Dados; // Matriz que armazena todos os dados do problema, exceto o número de partições m e o número de elementos n;
 int MAXPriceValue; // Valor máximo de uma partição;
 int n, m; // n representa a quantidade de elementos e m representa a quantidade de partições
-int T = 10; // tamanho da lista tabu;
+int T = 100; // tamanho da lista tabu;
 
 int sortByIndex(const void *a, const void *b){
   int i = *(int *)a;
@@ -20,6 +20,7 @@ solution guloso(){
     I[i] = i;
   }
   qsort(I, m, sizeof(int), sortByIndex);
+
   /*for (int i = 0; i < m; i++){
     for (int j = 0; j < sz(Dados[i]); j++){
       cout << Dados[I[i]][j] << " ";
@@ -27,7 +28,7 @@ solution guloso(){
     cout << endl;
   }
   s.print(n, m);
-*/
+  */
 
   for (int i = 0; i < m; i++){
     int ff = true;
@@ -92,6 +93,6 @@ vector<bool> makeVecBool(string s){
 int main(){
   read();
   cout << "max->" << MAXPriceValue << endl;
-  tabuT_variavel(n, m, T, MAXPriceValue, Dados).print(n, m);
+  tabuT_fixo(n, m, T, MAXPriceValue, Dados).print(n, m);
   return 0;
 }
