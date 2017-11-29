@@ -20,7 +20,7 @@ const ll INF = 0x3F3F3F3F3F3F3F3FLL;
 const double EPS = 1e-6;
 const double PI = 3.14159265358979;
 const int partSz = 32; // tamanho da partição na solução(tamanho de um inteiro)
-const int BTMAX = 1 << 10;
+const int BTMAX = 1 << 15;
 
 struct solucao{
   set<int> P;
@@ -30,7 +30,7 @@ struct solucao{
   ll FO;
   ll FO_semPen;
 
-  solucao(int m, ll MAXPriceValue){
+  solucao(int n, int m, ll MAXPriceValue){
     Q = 0;
     P.clear();
     for (int i = 0; i < m; i++){
@@ -38,7 +38,7 @@ struct solucao{
       Grau.pb(0);
     }
     FO_semPen = 0;
-    FO = FO_semPen + (m - Q)* MAXPriceValue;
+    FO = FO_semPen + (n - Q)* MAXPriceValue;
   }
 
   void operator =(solucao &_s) { //sobreescreve o operador =
@@ -62,7 +62,7 @@ struct solucao{
     return FO == _s.FO;
   }
 
-  void AdicionaElemento(int m, int e, int qtElementosCobertos, ll custo, set<int> viz, const ll MAXPriceValue){ // só adiciona elementos que podem ser adicionados
+  void AdicionaElemento(int n, int m, int e, int qtElementosCobertos, ll custo, set<int> viz, const ll MAXPriceValue){ // só adiciona elementos que podem ser adicionados
     P.insert(e);
     Q += qtElementosCobertos;
     set<int> aux;
@@ -73,13 +73,12 @@ struct solucao{
         aux.insert(v);
       }
     }
-    cout << endl;
     Next = aux;
     FO_semPen += custo;
-    FO = FO_semPen + (m - Q)*MAXPriceValue;
+    FO = FO_semPen + (n - Q)*MAXPriceValue;
   }
 
-  void RemoveElemento(int m, int e, int qtElementosCobertos, ll custo, const set<int> viz, const ll MAXPriceValue){ // só adiciona elementos que podem ser adicionados
+  void RemoveElemento(int n, int m, int e, int qtElementosCobertos, ll custo, const set<int> viz, const ll MAXPriceValue){ // só adiciona elementos que podem ser adicionados
     P.erase(e);
     Q -= qtElementosCobertos;
     for (auto v: viz){
@@ -93,13 +92,19 @@ struct solucao{
     }
     Next = aux;
     FO_semPen -= custo;
-    FO = FO_semPen + (m - Q) * MAXPriceValue;
+    FO = FO_semPen + (n - Q) * MAXPriceValue;
   }
 
-  void print(int m){
+  void print(int n, int m){
     cout << "FO: " << FO << endl;
-    cout << Q << " elementos cobertos" << endl;
+    cout << Q <<"/"<< n << " elementos cobertos" << endl;
+    cout << "P->";
     for (auto v: P){
+      cout << v << " ";
+    }
+    cout << endl;
+    cout << "Next->";
+    for (auto v: Next){
       cout << v << " ";
     }
     cout << endl;
@@ -107,7 +112,7 @@ struct solucao{
 };
 
 struct tabuList{
-  set<int> tl; // como cada movimento é apenas a troca de um bit, podemos representar usando um set;
+  map<int, int> tl; //o primeiro é
   queue<int> Q;
 
   tabuList(){
@@ -118,17 +123,24 @@ struct tabuList{
     tl.erase(u);
   }
 
-  void add(int x, int T){
+  void add(int x, int T, int iteracao){
     if (sz(tl) == T){
       int u = Q.front(); Q.pop();
       tl.erase(u);
     }
     Q.push(x);
-    tl.insert(x);
+    tl[x] = iteracao;
   }
 
   bool isTabu(int x){
     return tl.find(x) != tl.end();
+  }
+
+  void resize(int T){
+    while (sz(tl) > T){
+      int u = Q.front(); Q.pop();
+      tl.erase(u);
+    }
   }
 
   void clear(){
@@ -136,9 +148,13 @@ struct tabuList{
     while (!Q.empty()) Q.pop();
   }
 
+  int getPosition(int u){
+    return tl[u];
+  }
+
   void print(){
-    for (set<int>::iterator it = tl.begin(); it!=tl.end(); it++){
-      cout << *it <<" ";
+    for (map<int, int>::iterator it = tl.begin(); it!=tl.end(); it++){
+      cout << (*it).f <<" ";
     }
     cout << endl;
   }
@@ -146,8 +162,12 @@ struct tabuList{
 
 solucao guloso();
 int OrdenaPorIndice(const void *a, const void *b);
-bool FuncaoDeAspiracao(solucao s, int mov, solucao BestS);
+bool FuncaoDeAspiracao(int n, solucao s, solucao BestS, int &NoNewSolutionIteration, ll MAXPriceValue, int multiplicador);
+void UpdatefAspiration(solucao s, solucao BestS, int m, map<int, int> &LoopControlol, int &T, int &NoNewSolutionIteration, tabuList &lt);
+void chanceListaTabuSize(int m, int aumentaDiminui, int &T, tabuList &lt);
+solucao melhorVizinho(int n, int m, vector< vector<int> > Dados, vector< set<int> > Grafo, tabuList LT, ll MAXPriceValue, ll &IteracoesSemDiversificacao, solucao sMin, int &mov);
 bool conflito(int u, int v);
 void carregaDados();
 void printDadosSetPartitioning();
+solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo);
 int main();

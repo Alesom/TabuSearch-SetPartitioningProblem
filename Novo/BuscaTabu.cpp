@@ -1,94 +1,137 @@
 #include "main.hpp"
 
-#define MaxRepetitionElement 110
-#define MaxListSize 1024
+#define MaxRepetitionElement 500
+#define MaxListSize 32384
 #define MinT 2
 
-solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados){
-  solution s = guloso();
-  solution BestS = s;
+void chanceListaTabuSize(int m, int aumentaDiminui, int &T, tabuList &lt){
+  if (aumentaDiminui){
+    T = T << 1;
+    if (T >= m){
+      T = m;
+    }
+  }else{
+    T = T >> 1;
+    if (T < MinT){
+      T = 2;
+    }
+    lt.resize(T);
+  }
+}
 
-  int NoNewSolutionIteration = 0;
+void UpdatefAspiration(solucao s, solucao BestS, int m, map<int, int> &LoopControlol, int &T, int &NoNewSolutionIteration, tabuList &lt){
+  if (LoopControlol.find(s.FO) != LoopControlol.end()){
+    LoopControlol[s.FO]++;
+    NoNewSolutionIteration++;
+    if (NoNewSolutionIteration > MaxRepetitionElement){ // o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
+      cout << "NoNewSolutionIteration" << endl;
+      chanceListaTabuSize(m, 1, T, lt); // aumenta lista tabu
+      cout << "T->" << T<< endl;
+    }
+
+    if (LoopControlol[s.FO] > MaxRepetitionElement){// o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
+      chanceListaTabuSize(m, 1, T, lt); // aumenta o tamanho da lista tabu
+      cout << "T->" << T <<"    " << s.FO << " " << LoopControlol[s.FO]  << endl;
+    }
+  }else{
+    LoopControlol[s.FO] = 1;
+    NoNewSolutionIteration = 1;
+    if (sz(LoopControlol) > MaxListSize){
+      chanceListaTabuSize(m, 0, T, lt);
+      cout << "T->" << T << " " << LoopControlol.size()<< endl;
+      LoopControlol.clear();
+    }
+  }
+}
+
+solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo){
+  solucao s = guloso();
+  solucao BestS = s;
+  s.print(n, m);
+  int IteracoesSemDiversificacao = 0;
   map<int, int> LoopControlol; // variável para controle de vezes que vamos considerar uma solução;
   int iter, Miter = 0;
   tabuList LT; // lista tabu
-  T = m>>2; // setando o tamanho da lista tabu para 2.
-
+  T = 5; // setando o tamanho da lista tabu para 2.
 
   for (iter = 0; iter - Miter < BTMAX; iter++){
-    solution sMin = s;
-    sMin.FO_Value = INF;
+    solucao sMin = s;
+    sMin.FO = INF;
 
     int mov = -1;
-    for (int i = 0; i < m; i++){ // percorre todos os vizinhos da solução s
-      solution s1 = s;
-      s1.setBit(n, i, !s1.getBit(i), MAXPriceValue, Dados);
-      if (!LT.isTabu(i) || fAspiration(s1, i, BestS)){
-        if (sMin > s1){
-          sMin = s1;
-          mov = i;
+    int multiplicador = 1;
+    int aux = 0;
+
+    while (mov == -1){
+      int ultimoElemento;
+      int menor = INF;
+
+      for (auto e: s.Next){ //pecorre todos possíveis candidatos a entrarem na solução
+        solucao s1 = s;
+        s1.AdicionaElemento(n, m, e, sz(Dados[e]) - 1, Dados[e][0], Grafo[e], MAXPriceValue);
+        if (!LT.isTabu(e) || FuncaoDeAspiracao(n, s1, BestS, IteracoesSemDiversificacao, MAXPriceValue, multiplicador)){
+          if (sMin > s1){
+            sMin = s1;
+            mov = e;
+          }
+        }else{
+          int aux = LT.getPosition(e);
+          if (menor > aux){
+            menor = aux;
+            ultimoElemento = e;
+          }
         }
       }
-    }
 
-
-/*    for (map<int, int>::iterator it = LoopControlol.begin(); it!=LoopControlol.end(); it++){
-      cout << "("<< (*it).f << ","<< (*it).s << ") ";
+      for (auto e: s.P){ //percorre todos elementos que estão na solução
+        solucao s1 = s;
+        s1.RemoveElemento(n, m, e, sz(Dados[e]) - 1, Dados[e][0], Grafo[e], MAXPriceValue);
+        if (!LT.isTabu(e) || FuncaoDeAspiracao(n, s1, BestS, IteracoesSemDiversificacao, MAXPriceValue, multiplicador)){
+          if (sMin > s1){
+            sMin = s1;
+            mov = e;
+          }
+        }else{
+          int aux = LT.getPosition(e);
+          if (menor > aux){
+            menor = aux;
+            ultimoElemento = e;
+          }
+        }
+      }
+      if (multiplicador == 1 && mov == -1){
+        sMin = s;
+        mov = ultimoElemento;
+      /*  for (auto v: sMin.P){
+          cout << v << " ";
+        }
+        cout << endl;
+        cout << "Escolhido " << ultimoElemento << endl;
+        */
+        if (sMin.Next.find(ultimoElemento) != sMin.Next.end()){
+          sMin.AdicionaElemento(n, m, ultimoElemento, sz(Dados[ultimoElemento]) - 1, Dados[ultimoElemento][0], Grafo[ultimoElemento], MAXPriceValue);
+        }else{
+          sMin.RemoveElemento(n, m, ultimoElemento, sz(Dados[ultimoElemento]) - 1, Dados[ultimoElemento][0], Grafo[ultimoElemento], MAXPriceValue);
+        }
+      }
+      multiplicador = 10;
+      aux++;
     }
-    cout << endl;
-*/
-    LT.add(mov, T);
-  //  LT.print();
+    //cout << aux << endl;
+
+    UpdatefAspiration(sMin, BestS, m, LoopControlol, T, IteracoesSemDiversificacao, LT);
+
+    LT.add(mov, T, iter);
     s = sMin;
-
 
     if (sMin < BestS){
       BestS = sMin;
       Miter = iter;
-  //    cout << T << endl;
       cout << "Ganhou\n";
       sMin.print(n, m);
       cout << "end\n";
-    }
-
-    if (LoopControlol.find(sMin.FO_Value) != LoopControlol.end()){
-      LoopControlol[sMin.FO_Value]++;
-      NoNewSolutionIteration++;
-      if (NoNewSolutionIteration > MaxRepetitionElement){ // o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
-        T = T << 1;
-        if (T >= m){
-          T = m >> 1;
-        }
-        cout << "T->" << T<< endl;
-        //LoopControlol.clear();
-        NoNewSolutionIteration = 0;
-        s = BestS;
-        LT.clear();
-      }
-
-      if (LoopControlol[sMin.FO_Value] > MaxRepetitionElement){// o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
-        //LoopControlol.clear();
-        T = T << 1;
-        if (T >= m){
-          T = m >> 1;
-        }
-        NoNewSolutionIteration = 0;
-        cout << "T->" << T << endl;
-        s = BestS;
-        LT.clear();
-      }
-    }else{
-      LoopControlol[sMin.FO_Value] = 1;
-      if (sz(LoopControlol) > MaxListSize){
-        //LoopControlol.clear();
-        T = T >> 1;
-        if (T < MinT){
-          T = 2;
-        }
-        cout << "T->" << T<< endl;
-        s = BestS;
-        LT.clear();
-      }
+      LoopControlol.clear();
+      IteracoesSemDiversificacao = 0;
     }
   }
   return BestS;

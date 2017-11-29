@@ -1,0 +1,4127 @@
+g++ main.hpp -std=c++11 -Wall
+g++ *.cpp -Wall -std=c++11 -o Tabu
+./Tabu < ../instances/antigas/spp_toy.txt
+0->2 3 7 8 
+1->6 7 
+2->0 4 9 
+3->0 4 5 6 7 9 
+4->2 3 6 7 8 
+5->3 8 
+6->1 3 4 8 9 
+7->0 1 3 4 
+8->0 4 5 6 
+9->2 3 6 
+FO: 530
+4/5 elementos cobertos
+P->1 6 
+Next->
+FO: 1475
+2/5 elementos cobertos
+P->6 
+Next->1 3 4 8 9 
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+Ganhou
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+end
+FO: 1056
+3/5 elementos cobertos
+P->3 9 
+Next->6 
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 572
+4/5 elementos cobertos
+P->3 4 6 
+Next->
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 
+FO: 81
+5/5 elementos cobertos
+P->3 6 9 
+Next->
+FO: 531
+4/5 elementos cobertos
+P->6 9 
+Next->3 
+FO: 1506
+2/5 elementos cobertos
+P->9 
+Next->2 3 6 
+FO: 548
+4/5 elementos cobertos
+P->2 9 
+Next->
+FO: 1492
+2/5 elementos cobertos
+P->2 
+Next->0 4 9 
+FO: 528
+4/5 elementos cobertos
+P->0 2 
+Next->
+FO: 1486
+2/5 elementos cobertos
+P->0 
+Next->2 3 7 8 
+FO: 539
+4/5 elementos cobertos
+P->0 7 
+Next->3 
+FO: 89
+5/5 elementos cobertos
+P->0 3 7 
+Next->
+FO: 1053
+3/5 elementos cobertos
+P->3 7 
+Next->0 4 
+FO: 600
+4/5 elementos cobertos
+P->3 4 7 
+Next->
+FO: 1050
+3/5 elementos cobertos
+P->4 7 
+Next->3 
+FO: 1997
+1/5 elementos cobertos
+P->4 
+Next->2 3 6 7 8 
+FO: 1022
+3/5 elementos cobertos
+P->4 6 
+Next->3 8 
+FO: 91
+5/5 elementos cobertos
+P->4 6 8 
+Next->
+FO: 544
+4/5 elementos cobertos
+P->6 8 
+Next->4 
+FO: 1519
+2/5 elementos cobertos
+P->8 
+Next->0 4 5 6 
+FO: 549
+4/5 elementos cobertos
+P->5 8 
+Next->
+FO: 1480
+2/5 elementos cobertos
+P->5 
+Next->3 8 
+FO: 1030
+3/5 elementos cobertos
+P->3 5 
+Next->
+FO: 2000
+1/5 elementos cobertos
+P->3 
+Next->0 4 5 6 7 9 
+FO: 1025
+3/5 elementos cobertos
+P->3 6 
+Next->4 9 

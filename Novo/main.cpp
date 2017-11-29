@@ -7,7 +7,7 @@ int T = 10; // tamanho da lista tabu;
 vector < set<int> > Grafo;
 
 solucao guloso(){
-  solucao s = solucao(m, MAXPriceValue);
+  solucao s = solucao(n, m, MAXPriceValue);
 
   while (sz(s.Next)){
     set<int>:: iterator it, best;
@@ -23,14 +23,29 @@ solucao guloso(){
         }
       }
     }
-    s.AdicionaElemento(m, *best, sz(Dados[*best]) - 1, Dados[*best][0], Grafo[*best], MAXPriceValue);
-
+    s.AdicionaElemento(n, m, *best, sz(Dados[*best]) - 1, Dados[*best][0], Grafo[*best], MAXPriceValue);
   }
   return s;
 }
 
-bool FuncaoDeAspiracao(solucao s, int mov, solucao BestS){
+bool FuncaoDeAspiracao(int n, solucao s, solucao BestS, int &NoNewSolutionIteration, ll MAXPriceValue, int multiplicador){
   if (BestS > s) return true;
+
+/*  random_device rd;  //Will be used to obtain a seed for the random number engine
+  mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
+  uniform_int_distribution<> dis(1, 100);
+  int r1 = dis(gen);
+  int r2 = dis(gen);
+  int pen = (s.FO - s.FO_semPen)/MAXPriceValue;
+  int RandomConstant = 4;
+  int MaxRepetitionElement = 500;
+
+  if ((200.0*pen/n) < r1 && (multiplicador*NoNewSolutionIteration*50 / (MaxRepetitionElement)) > r2){
+    cout << NoNewSolutionIteration << " " << multiplicador <<"  Sorteou "<< pen << " " << r1 << " " << r2 << endl;
+    NoNewSolutionIteration = 1;
+    return true;
+  }*/
+  
   return false;
 }
 
@@ -89,17 +104,14 @@ void printDadosSetPartitioning(){
 
 int main(){
   carregaDados();
-  for (int i = 0; i < m; i++){
+/*  for (int i = 0; i < m; i++){
     cout << i <<"->";
     for (auto u: Grafo[i]){
       cout << u << " ";
     }
     cout << endl;
   }
-  /*solucao s = guloso();
-  s.RemoveElemento(m, 6, sz(Dados[6]) - 1, Dados[6][0], Grafo[6], MAXPriceValue);
-  s.print(m);*/
-  //cout << "max->" << MAXPriceValue << endl;
-  //tabuT_variavel(n, m, T, MAXPriceValue, Dados).print(n, m);
+  int T = m >> 1;*/
+  BuscaTabu(n, m, T, MAXPriceValue, Dados, Grafo).print(n, m);
   return 0;
 }
