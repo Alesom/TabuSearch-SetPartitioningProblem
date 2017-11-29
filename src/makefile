@@ -1,7 +1,7 @@
 all: execute
 
 execute: compile
-	./Tabu < ../instances/sppnw32.txt
+	./Tabu < ../instances/sppnw41.txt
 
 compile: headerfile
 	g++ *.cpp -Wall -std=c++11 -o Tabu
