@@ -130,9 +130,9 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
     if (sMin < BestS){
       BestS = sMin;
       Miter = iter;
-      cout << "Ganhou\n";
+      /*cout << "Ganhou\n";
       sMin.print(n, m);
-      cout << "end\n";
+      cout << "end\n";*/
       LoopControlol.clear();
       IteracoesSemDiversificacao = 0;
     }
