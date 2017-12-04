@@ -6,6 +6,32 @@ int n, m; // n representa a quantidade de elementos e m representa a quantidade 
 int T = 10; // tamanho da lista tabu;
 vector < set<int> > Grafo;
 
+
+solucao randomStart(){
+  solucao s = solucao(n, m, MAXPriceValue);
+
+  while (sz(s.Next)){
+    set<int>:: iterator it = s.Next.begin();
+    random_device rd;  //Will be used to obtain a seed for the random number engine
+    mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
+    uniform_int_distribution<> dis(0, sz(s.Next)-1);
+/*
+    for (auto v: s.Next){
+      cout << v << " ";
+    }
+    cout << endl;
+*/
+    //printf("%d\n", r1);
+    int r1 = dis(gen);
+
+    advance(it, r1);
+    //cout << "it-> " << *  it << endl;
+
+    s.AdicionaElemento(n, m, *it, sz(Dados[*it]) - 1, Dados[*it][0], Grafo[*it], MAXPriceValue);
+  }
+  return s;
+}
+
 solucao guloso(){
   solucao s = solucao(n, m, MAXPriceValue);
 
@@ -30,22 +56,6 @@ solucao guloso(){
 
 bool FuncaoDeAspiracao(int n, solucao s, solucao BestS, int &NoNewSolutionIteration, ll MAXPriceValue, int multiplicador){
   if (BestS > s) return true;
-
-/*  random_device rd;  //Will be used to obtain a seed for the random number engine
-  mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
-  uniform_int_distribution<> dis(1, 100);
-  int r1 = dis(gen);
-  int r2 = dis(gen);
-  int pen = (s.FO - s.FO_semPen)/MAXPriceValue;
-  int RandomConstant = 4;
-  int MaxRepetitionElement = 500;
-
-  if ((200.0*pen/n) < r1 && (multiplicador*NoNewSolutionIteration*50 / (MaxRepetitionElement)) > r2){
-    cout << NoNewSolutionIteration << " " << multiplicador <<"  Sorteou "<< pen << " " << r1 << " " << r2 << endl;
-    NoNewSolutionIteration = 1;
-    return true;
-  }*/
-  
   return false;
 }
 
@@ -112,6 +122,7 @@ int main(){
     cout << endl;
   }
   int T = m >> 1;*/
-  BuscaTabu(n, m, T, MAXPriceValue, Dados, Grafo).print(n, m);
+  tabuHibrido(n, m, T, MAXPriceValue, Dados, Grafo).print(n, m);
+  //randomStart().print(n,m);
   return 0;
 }

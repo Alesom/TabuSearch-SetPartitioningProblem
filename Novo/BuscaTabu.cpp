@@ -3,6 +3,7 @@
 #define MaxRepetitionElement 500
 #define MaxListSize 32384
 #define MinT 2
+#define MaxHibridIteration 1024
 
 void chanceListaTabuSize(int m, int aumentaDiminui, int &T, tabuList &lt){
   if (aumentaDiminui){
@@ -24,37 +25,45 @@ void UpdatefAspiration(solucao s, solucao BestS, int m, map<int, int> &LoopContr
     LoopControlol[s.FO]++;
     NoNewSolutionIteration++;
     if (NoNewSolutionIteration > MaxRepetitionElement){ // o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
-      cout << "NoNewSolutionIteration" << endl;
       chanceListaTabuSize(m, 1, T, lt); // aumenta lista tabu
-      cout << "T->" << T<< endl;
     }
 
     if (LoopControlol[s.FO] > MaxRepetitionElement){// o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
       chanceListaTabuSize(m, 1, T, lt); // aumenta o tamanho da lista tabu
-      cout << "T->" << T <<"    " << s.FO << " " << LoopControlol[s.FO]  << endl;
     }
   }else{
     LoopControlol[s.FO] = 1;
     NoNewSolutionIteration = 1;
     if (sz(LoopControlol) > MaxListSize){
       chanceListaTabuSize(m, 0, T, lt);
-      cout << "T->" << T << " " << LoopControlol.size()<< endl;
       LoopControlol.clear();
     }
   }
 }
 
-solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo){
+
+solucao tabuHibrido(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo){
   solucao s = guloso();
   solucao BestS = s;
-  s.print(n, m);
+
+  for (int iter = 0; iter < MaxHibridIteration; iter++){
+      BuscaTabu(n, m, T, MAXPriceValue, Dados, Grafo, s, BestS);
+      if (s < BestS){
+        BestS = s;
+      }
+      s = randomStart();
+  }
+  return BestS;
+}
+
+solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo, solucao &s, solucao &BestS){
   int IteracoesSemDiversificacao = 0;
   map<int, int> LoopControlol; // variável para controle de vezes que vamos considerar uma solução;
-  int iter, Miter = 0;
+  unsigned iter, Miter = 0;
   tabuList LT; // lista tabu
   T = 5; // setando o tamanho da lista tabu para 2.
 
-  for (iter = 0; iter - Miter < BTMAX; iter++){
+  for (iter = 0; iter - Miter < BTMAX && iter < 0xf3f3f3f3; iter++){
     solucao sMin = s;
     sMin.FO = INF;
 
@@ -64,7 +73,7 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
 
     while (mov == -1){
       int ultimoElemento;
-      int menor = INF;
+      ll menor = INF;
 
       for (auto e: s.Next){ //pecorre todos possíveis candidatos a entrarem na solução
         solucao s1 = s;
@@ -102,12 +111,6 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
       if (multiplicador == 1 && mov == -1){
         sMin = s;
         mov = ultimoElemento;
-      /*  for (auto v: sMin.P){
-          cout << v << " ";
-        }
-        cout << endl;
-        cout << "Escolhido " << ultimoElemento << endl;
-        */
         if (sMin.Next.find(ultimoElemento) != sMin.Next.end()){
           sMin.AdicionaElemento(n, m, ultimoElemento, sz(Dados[ultimoElemento]) - 1, Dados[ultimoElemento][0], Grafo[ultimoElemento], MAXPriceValue);
         }else{
@@ -117,7 +120,6 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
       multiplicador = 10;
       aux++;
     }
-    //cout << aux << endl;
 
     UpdatefAspiration(sMin, BestS, m, LoopControlol, T, IteracoesSemDiversificacao, LT);
 
@@ -127,9 +129,9 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
     if (sMin < BestS){
       BestS = sMin;
       Miter = iter;
-      cout << "Ganhou\n";
+    /*  cout << "Ganhou\n";
       sMin.print(n, m);
-      cout << "end\n";
+      cout << "end\n";*/
       LoopControlol.clear();
       IteracoesSemDiversificacao = 0;
     }

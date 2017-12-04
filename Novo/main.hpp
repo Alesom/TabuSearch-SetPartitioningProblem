@@ -23,12 +23,12 @@ const int partSz = 32; // tamanho da partição na solução(tamanho de um intei
 const int BTMAX = 1 << 15;
 
 struct solucao{
-  set<int> P;
-  int Q;
-  set<int> Next;
-  vector<int> Grau;
-  ll FO;
-  ll FO_semPen;
+  set<int> P; // conjunto que armazena os elementos que estão na solução
+  int Q; //representa a quantidade cobertos pela solução
+  set<int> Next; // representa os possíveis elementos que ainda podem entrar na solução
+  vector<int> Grau; // auxilia no controle do vetor next;
+  ll FO; // valor da função objetivo;
+  ll FO_semPen; //valor da função objetivo sem as penalizações
 
   solucao(int n, int m, ll MAXPriceValue){
     Q = 0;
@@ -41,7 +41,7 @@ struct solucao{
     FO = FO_semPen + (n - Q)* MAXPriceValue;
   }
 
-  void operator =(solucao &_s) { //sobreescreve o operador =
+  void operator =(const solucao &_s) { //sobreescreve o operador =
     P = _s.P;
     Q = _s.Q;
     Next = _s.Next;
@@ -169,5 +169,7 @@ solucao melhorVizinho(int n, int m, vector< vector<int> > Dados, vector< set<int
 bool conflito(int u, int v);
 void carregaDados();
 void printDadosSetPartitioning();
-solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo);
+solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo, solucao &s, solucao &BestS);
+solucao tabuHibrido(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo);
+solucao randomStart();
 int main();
