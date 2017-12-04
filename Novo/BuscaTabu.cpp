@@ -3,7 +3,8 @@
 #define MaxRepetitionElement 500
 #define MaxListSize 32384
 #define MinT 2
-#define MaxHibridIteration 1024
+#define MaxHibridIteration 20
+#define MAXITERACOES 0xf3f3f3
 
 void chanceListaTabuSize(int m, int aumentaDiminui, int &T, tabuList &lt){
   if (aumentaDiminui){
@@ -63,7 +64,7 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
   tabuList LT; // lista tabu
   T = 5; // setando o tamanho da lista tabu para 2.
 
-  for (iter = 0; iter - Miter < BTMAX && iter < 0xf3f3f3f3; iter++){
+  for (iter = 0; iter - Miter < BTMAX && iter < MAXITERACOES; iter++){
     solucao sMin = s;
     sMin.FO = INF;
 
@@ -129,9 +130,9 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
     if (sMin < BestS){
       BestS = sMin;
       Miter = iter;
-    /*  cout << "Ganhou\n";
+      cout << "Ganhou\n";
       sMin.print(n, m);
-      cout << "end\n";*/
+      cout << "end\n";
       LoopControlol.clear();
       IteracoesSemDiversificacao = 0;
     }
