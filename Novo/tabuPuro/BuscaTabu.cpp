@@ -20,22 +20,28 @@ void chanceListaTabuSize(int m, int aumentaDiminui, int &T, tabuList &lt){
 }
 
 void UpdatefAspiration(solucao s, solucao BestS, int m, map<int, int> &LoopControlol, int &T, int &NoNewSolutionIteration, tabuList &lt){
-  if (LoopControlol.find(s.FO) != LoopControlol.end()){
-    LoopControlol[s.FO]++;
-    NoNewSolutionIteration++;
-    if (NoNewSolutionIteration > MaxRepetitionElement){ // o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
-      chanceListaTabuSize(m, 1, T, lt); // aumenta lista tabu
-    }
+  void UpdatefAspiration(solucao s, solucao BestS, int m, map<int, int> &LoopControlol, int &T, int &NoNewSolutionIteration, tabuList &lt){
+    if (LoopControlol.find(s.FO) != LoopControlol.end()){
+      LoopControlol[s.FO]++;
+      NoNewSolutionIteration++;
+      if (NoNewSolutionIteration > MaxRepetitionElement){ // o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
+        chanceListaTabuSize(m, 1, T, lt); // aumenta lista tabu
+        LoopControlol.clear();
+        NoNewSolutionIteration = 1;
+      }
 
-    if (LoopControlol[s.FO] > MaxRepetitionElement){// o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
-      chanceListaTabuSize(m, 1, T, lt); // aumenta o tamanho da lista tabu
-    }
-  }else{
-    LoopControlol[s.FO] = 1;
-    NoNewSolutionIteration = 1;
-    if (sz(LoopControlol) > MaxListSize){
-      chanceListaTabuSize(m, 0, T, lt);
-      LoopControlol.clear();
+      if (LoopControlol[s.FO] > MaxRepetitionElement){// o programa está em um loop; -> Aumenta o tamanho da lista tabu para dar mais diversificação;
+        chanceListaTabuSize(m, 1, T, lt); // aumenta o tamanho da lista tabu
+        LoopControlol.clear();
+        NoNewSolutionIteration = 1;
+      }
+    }else{
+      LoopControlol[s.FO] = 1;
+      NoNewSolutionIteration = 1;
+      if (sz(LoopControlol) > MaxListSize){
+        chanceListaTabuSize(m, 0, T, lt);
+        LoopControlol.clear();
+      }
     }
   }
 }
@@ -48,8 +54,9 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
   unsigned iter, Miter = 0;
   tabuList LT; // lista tabu
   T = 5; // setando o tamanho da lista tabu para 2.
-
+  //cout << "T, Iteração, FO\n";
   for (iter = 0; iter - Miter < BTMAX && iter < 0xf3f3f3f3; iter++){
+    cout << T << "," << iter << "," << s.FO << endl;
     solucao sMin = s;
     sMin.FO = INF;
 

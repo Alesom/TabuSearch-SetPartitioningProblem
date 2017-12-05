@@ -36,7 +36,7 @@ void UpdatefAspiration(solucao s, solucao BestS, int m, map<int, int> &LoopContr
     LoopControlol[s.FO] = 1;
     NoNewSolutionIteration = 1;
     if (sz(LoopControlol) > MaxListSize){
-      chanceListaTabuSize(m, 0, T, lt);
+      chanceListaTabuSize(m, 0, T, lt); // diminui o tamanho da lista tabu
       LoopControlol.clear();
     }
   }
@@ -46,9 +46,10 @@ void UpdatefAspiration(solucao s, solucao BestS, int m, map<int, int> &LoopContr
 solucao tabuHibrido(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > Dados, vector < set<int> > Grafo){
   solucao s = guloso();
   solucao BestS = s;
+  cout << "hi";
 
   for (int iter = 0; iter < MaxHibridIteration; iter++){
-      BuscaTabu(n, m, T, MAXPriceValue, Dados, Grafo, s, BestS);
+      s = BuscaTabu(n, m, T, MAXPriceValue, Dados, Grafo, s, BestS);
       if (s < BestS){
         BestS = s;
       }
@@ -61,10 +62,13 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
   int IteracoesSemDiversificacao = 0;
   map<int, int> LoopControlol; // variável para controle de vezes que vamos considerar uma solução;
   unsigned iter, Miter = 0;
+  solucao localBest = s;
+
   tabuList LT; // lista tabu
   T = 5; // setando o tamanho da lista tabu para 2.
-
+//  cout << "T, iteração, FO" << endl;
   for (iter = 0; iter - Miter < BTMAX && iter < MAXITERACOES; iter++){
+//    cout << T << "," << iter << "," << s.FO << endl;
     solucao sMin = s;
     sMin.FO = INF;
 
@@ -79,7 +83,7 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
       for (auto e: s.Next){ //pecorre todos possíveis candidatos a entrarem na solução
         solucao s1 = s;
         s1.AdicionaElemento(n, m, e, sz(Dados[e]) - 1, Dados[e][0], Grafo[e], MAXPriceValue);
-        if (!LT.isTabu(e) || FuncaoDeAspiracao(n, s1, BestS, IteracoesSemDiversificacao, MAXPriceValue, multiplicador)){
+        if (!LT.isTabu(e) || FuncaoDeAspiracao(n, s1, localBest, IteracoesSemDiversificacao, MAXPriceValue, multiplicador)){
           if (sMin > s1){
             sMin = s1;
             mov = e;
@@ -96,7 +100,7 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
       for (auto e: s.P){ //percorre todos elementos que estão na solução
         solucao s1 = s;
         s1.RemoveElemento(n, m, e, sz(Dados[e]) - 1, Dados[e][0], Grafo[e], MAXPriceValue);
-        if (!LT.isTabu(e) || FuncaoDeAspiracao(n, s1, BestS, IteracoesSemDiversificacao, MAXPriceValue, multiplicador)){
+        if (!LT.isTabu(e) || FuncaoDeAspiracao(n, s1, localBest, IteracoesSemDiversificacao, MAXPriceValue, multiplicador)){
           if (sMin > s1){
             sMin = s1;
             mov = e;
@@ -122,13 +126,13 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
       aux++;
     }
 
-    UpdatefAspiration(sMin, BestS, m, LoopControlol, T, IteracoesSemDiversificacao, LT);
+    UpdatefAspiration(sMin, localBest, m, LoopControlol, T, IteracoesSemDiversificacao, LT);
 
     LT.add(mov, T, iter);
     s = sMin;
 
-    if (sMin < BestS){
-      BestS = sMin;
+    if (sMin < localBest){
+      localBest = sMin;
       Miter = iter;
       /*cout << "Ganhou\n";
       sMin.print(n, m);
@@ -137,5 +141,5 @@ solucao BuscaTabu(int n, int m, int &T, ll MAXPriceValue, vector< vector<int> > 
       IteracoesSemDiversificacao = 0;
     }
   }
-  return BestS;
+  return localBest;
 }
